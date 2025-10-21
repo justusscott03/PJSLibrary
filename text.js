@@ -1,6 +1,6 @@
-import { pjsSettings } from "../config/pjsSettings.js";
-import { fill } from "./colors.js";
-import { sin, cos } from "./trigonometry.js";
+import { pjsSettings } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/pjsSettings.js";
+import { fill } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/color.js";
+import { sin, cos } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/trigonometry.js";
 
 const ctx = document.getElementById("canvas").getContext("2d");
 

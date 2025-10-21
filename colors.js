@@ -1,4 +1,4 @@
-import { constrain } from "./math.js";
+import { constrain } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/math.js";
 
 const ctx = document.getElementById("canvas").getContext("2d");
 

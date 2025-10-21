@@ -1,4 +1,4 @@
-import { pjsSettings } from '../config/pjsSettings.js';
+import { pjsSettings } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/pjsSettings.js";
 
 const ctx = document.getElementById('canvas').getContext('2d');
 
