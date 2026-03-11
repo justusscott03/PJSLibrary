@@ -1,17 +1,39 @@
-import { pjsSettings } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/pjsSettings.js";
-import { fill } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/colors.js";
-import { sin, cos } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.1/trigonometry.js";
+import { pjsSettings } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/pjsSettings.js";
+import { fill } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/colors.js";
+import { sin, cos } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/trigonometry.js";
 
 const ctx = document.getElementById("canvas").getContext("2d");
 
 function textFont (font) {
     pjsSettings.globalFont = font;
-    ctx.font = `${pjsSettings.globalSize}px ${pjsSettings.globalFont}`;
+    updateText();
 }
 
 function textSize (size) {
     pjsSettings.globalSize = size;
-    ctx.font = `${pjsSettings.globalSize}px ${pjsSettings.globalFont}`;
+    updateText();
+}
+
+function textWeight(weight) {
+    if (!["lighter", "normal", "bold", "bolder"].includes(weight)) {
+        console.error("Invalid textWeight:", weight);
+    }   
+
+    pjsSettings.globalWeight = weight;
+    updateText();
+}
+
+function textStyle(style) {
+    if (!["normal", "italic"].includes(style)) {
+        console.error("Invalid textStyle:", style);
+    }  
+
+    pjsSettings.globalStyle = style;
+    updateText();
+}
+
+function updateText() {
+    ctx.font = `${pjsSettings.globalStyle} ${pjsSettings.globalWeight} ${pjsSettings.globalSize}px ${pjsSettings.globalFont}`;
 }
 
 /**
@@ -47,4 +69,4 @@ function outlinedText (message, x, y, weight, main, outline, inc = 10) {
     text(message, x, y);
 }
 
-export { textFont, textSize, textAlign, text, outlinedText };
+export { textFont, textSize, textWeight, textStyle, textAlign, text, outlinedText };

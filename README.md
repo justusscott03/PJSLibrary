@@ -9,7 +9,7 @@ PJSLibrary is a lightweight, reusable, and scalable JavaScript library inspired 
 Initiate a canvas for the PJSLibrary by running initPJS.js directly via CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.0/initPJS.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/initPJS.js"></script>
 ```
 
 After that, just import and call the functions to use with your created canvas! Super easy!
@@ -22,13 +22,12 @@ Here's a primitive code setup:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PJSLibrary Sketch</title>
-    <script src="https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.0/initPJS.js"></script>
   </head>
   <body>
     <!-- Creates the canvas -->
-    <script src="https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.0/initPJS.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/initPJS.js"></script>
     <script type="module">
-        import { rect, ellipse, rectMode, ellipseMode } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.0/shapes.js";
+        import { rect, ellipse, rectMode, ellipseMode } from "https://cdn.jsdelivr.net/gh/justusscott03/PJSLibrary@v1.1.3/shapes.js";
 
         rectMode("CENTER");
         ellipseMode("CENTER");

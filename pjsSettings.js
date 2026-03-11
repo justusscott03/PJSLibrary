@@ -4,5 +4,7 @@ export const pjsSettings = {
     requiresFirstVertex : true, 
     angleMode : "degrees", 
     globalFont : "serif", 
-    globalSize : 10
+    globalSize : 10,
+    globalWeight : "normal",
+    globalStyle : "normal"
 };

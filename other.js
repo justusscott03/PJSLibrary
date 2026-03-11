@@ -23,8 +23,18 @@ function get (x = 0, y = 0, w = canvas.width, h = canvas.height) {
     }
 }
 
+function startMask(shape) {
+    ctx.save();
+    shape();
+    ctx.clip();
+}
+
+function endMask() {
+    ctx.restore();
+}
+
 function cursor (cursor) {
     document.body.style.cursor = cursor;
 }
 
-export { get, cursor };
+export { get, startMask, endMask, cursor };
